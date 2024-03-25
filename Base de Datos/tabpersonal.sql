@@ -18,39 +18,38 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `celulares`
+-- Base de datos: `tabpersonal`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `articulos`
+-- Estructura de tabla para la tabla `personal`
 --
 
-CREATE TABLE `articulos` (
+CREATE TABLE `personal` (
   `id` int(11) NOT NULL,
   `descripcion` varchar(250) NOT NULL,
-  `precio` int(11) NOT NULL,
-  `stock` int(11) NOT NULL
+  `cantidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `articulos`
+-- Volcado de datos para la tabla `personal`
 --
 
-INSERT INTO `articulos` (`id`, `descripcion`, `precio`, `stock`) VALUES
-(1, 'Samsung S8', 250, 55),
-(2, 'Remi 3', 154, 36),
-(3, 'Motorola G3', 20, 140);
+INSERT INTO `personal` (`id`, `descripcion`, `cantidad`) VALUES
+(1, 'Civil', 250),
+(2, 'Militar', 385),
+(3, 'Docente', 122);
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `articulos`
+-- Indices de la tabla `personal`
 --
-ALTER TABLE `articulos`
+ALTER TABLE `personal`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -58,9 +57,9 @@ ALTER TABLE `articulos`
 --
 
 --
--- AUTO_INCREMENT de la tabla `articulos`
+-- AUTO_INCREMENT de la tabla `personal`
 --
-ALTER TABLE `articulos`
+ALTER TABLE `personal`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
